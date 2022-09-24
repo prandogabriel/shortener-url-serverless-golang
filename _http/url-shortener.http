@@ -1,0 +1,8 @@
+POST http://127.0.0.1:3000/shortener HTTP/1.1
+content-type: application/json
+
+{
+    "name": "utf-repos",
+    "url": "https://github.com/gprando55/UTFPR",
+    "createBy": "gabriel prando"
+}
