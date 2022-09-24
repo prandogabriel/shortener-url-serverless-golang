@@ -34,7 +34,7 @@ Resources:
   ShortenURLFunction:
     Type: AWS::Serverless::Function 
     Properties:
-      FunctionName: "create-plan"
+      FunctionName: "shorten-url"
       CodeUri: cmd/lambdas/url/shorten
       Handler: shorten
       Events:
