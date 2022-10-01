@@ -2,7 +2,7 @@ package shorten_url
 
 import (
 	"url-shortener/internal/domain/ports/logger"
-	shortenUrl "url-shortener/internal/domain/usecases/url/shorten"
+	shortenUrl "url-shortener/internal/domain/usecases/shorten-url"
 	shortenedRepo "url-shortener/internal/infrastructure/adapters/repositories/shortened-url"
 )
 
