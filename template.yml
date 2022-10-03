@@ -19,7 +19,7 @@ Resources:
     Type: AWS::Serverless::Function 
     Properties:
       FunctionName: "retrieve-url"
-      CodeUri: cmd/lambdas/url/retrieve
+      CodeUri: cmd/lambdas/retrieve-url
       Handler: retrieve
       Events:
         HTTP:
@@ -35,7 +35,7 @@ Resources:
     Type: AWS::Serverless::Function 
     Properties:
       FunctionName: "shorten-url"
-      CodeUri: cmd/lambdas/url/shorten
+      CodeUri: cmd/lambdas/shorten-url
       Handler: shorten
       Events:
         HTTP:

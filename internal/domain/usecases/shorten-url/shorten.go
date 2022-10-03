@@ -2,11 +2,11 @@ package shorten_url
 
 import (
 	"url-shortener/internal/domain/entities"
-	"url-shortener/internal/domain/errors"
 	"url-shortener/internal/domain/ports/logger"
 	"url-shortener/internal/domain/ports/repositories"
-	"url-shortener/internal/domain/utils/date"
-	"url-shortener/internal/domain/utils/uid"
+	"url-shortener/pkg/errors"
+	"url-shortener/pkg/utils/date"
+	"url-shortener/pkg/utils/uid"
 )
 
 type ShortenURLUseCase interface {

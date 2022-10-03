@@ -1,10 +1,10 @@
 package main
 
 import (
-	retrieveURL "url-shortener/internal/domain/usecases/url/retrieve"
+	retrieveURL "url-shortener/internal/domain/usecases/retrieve-url"
 	"url-shortener/internal/infrastructure/adapters/logger"
 	"url-shortener/internal/infrastructure/adapters/response"
-	retrieveURLUseCaseFactory "url-shortener/internal/infrastructure/factories/url/retrieve-usecase"
+	retrieveURLUseCaseFactory "url-shortener/internal/infrastructure/factories/usecases/retrieve-url-usecase-factory"
 
 	"github.com/aws/aws-lambda-go/events"
 	runtime "github.com/aws/aws-lambda-go/lambda"

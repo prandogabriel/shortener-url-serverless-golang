@@ -2,10 +2,10 @@ package main
 
 import (
 	"encoding/json"
-	shortenURL "url-shortener/internal/domain/usecases/url/shorten"
+	shortenURL "url-shortener/internal/domain/usecases/shorten-url"
 	"url-shortener/internal/infrastructure/adapters/logger"
 	"url-shortener/internal/infrastructure/adapters/response"
-	shortenURLUseCaseFactory "url-shortener/internal/infrastructure/factories/url/shorten-usecase"
+	shortenURLUseCaseFactory "url-shortener/internal/infrastructure/factories/usecases/shorten-url-usecase-factory"
 
 	"github.com/aws/aws-lambda-go/events"
 	runtime "github.com/aws/aws-lambda-go/lambda"

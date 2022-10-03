@@ -9,3 +9,11 @@ sam local start-api
 ```
 
 * configure your aws credentials in ~/.aws/credentials file and create a table in your dynamo with the name "ShortenedUrl"# shortener url
+
+
+
+# https://github.com/uccmen/serverless-go
+
+```bash
+yarn global add supervisor aws-sam-local
+```
