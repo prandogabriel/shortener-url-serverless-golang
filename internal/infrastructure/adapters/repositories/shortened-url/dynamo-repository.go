@@ -1,4 +1,4 @@
-package dynamo_shortened_url_repository
+package shortened_url_repository
 
 import (
 	"errors"
