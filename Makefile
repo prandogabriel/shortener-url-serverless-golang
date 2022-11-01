@@ -21,3 +21,6 @@ start-local:
 
 clean:
 	rm -rf .aws-sam/*
+
+test:
+	go test -coverprofile=coverage.out ./...
