@@ -2,13 +2,18 @@
 
 ## Running the project:
 
-```bash
-sam build
 
-sam local start-api
+## Required:
+- Install the supervisor npm package to hot reload app 
+
+```bash
+npm i -g supervisor
+```
+### After running project in development mode with hot reload
+```bash
+make start-dev
 ```
 
-* configure your aws credentials in ~/.aws/credentials file and create a table in your dynamo with the name "ShortenedUrl"# shortener url
 
 
 
