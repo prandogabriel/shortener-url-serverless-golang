@@ -6,7 +6,8 @@ Description: >
   
 Globals:
   Function:
-    Timeout: 3
+    Timeout: 60
+    MemorySize: 1024
     Environment:
       Variables:
         APP_REGION: "eu-east-1"
@@ -47,6 +48,24 @@ Resources:
       Policies:
         - DynamoDBCrudPolicy:
             TableName: ShortenedUrl
+  ShortenedUrlTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    Properties:
+      TableName: ShortenedUrl
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+      # TimeToLiveSpecification:
+      #   AttributeName: ttl
+      #   Enabled: true
+      # StreamSpecification:
+      #   StreamViewType: NEW_AND_OLD_IMAGES
+     
 
   ## =====================================
   ##          Comms

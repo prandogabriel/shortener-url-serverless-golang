@@ -1,10 +1,10 @@
 build: deps
-	make recompile
-
-recompile:
 	GO111MODULE=on
 	make clean
 	sam build
+
+recompile:
+	make build
 	make start-local
 
 deps:
@@ -24,3 +24,6 @@ clean:
 
 test:
 	go test -coverprofile=coverage.out ./...
+
+deploy-local:
+	samlocal deploy --stack-name shortener-url-serverless-golang --capabilities CAPABILITY_IAM

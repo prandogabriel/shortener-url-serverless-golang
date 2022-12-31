@@ -20,7 +20,10 @@ type dynamoDB struct {
 
 func NewShortenedUrlRepository() repositories.ShortenedUrlRepository {
 	sess := session.Must(session.NewSessionWithOptions(session.Options{
-		SharedConfigState: session.SharedConfigEnable,
+		SharedConfigState: session.SharedConfigEnable, Config: aws.Config{
+			Region:   aws.String("us-east-1"),
+			Endpoint: aws.String("http://localhost:4566"),
+		},
 	}))
 
 	svc := dynamodb.New(sess)

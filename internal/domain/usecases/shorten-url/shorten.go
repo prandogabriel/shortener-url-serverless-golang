@@ -31,6 +31,8 @@ func (uc *useCase) Execute(input Input) (entities.ShortenedUrl, *errors.AppError
 	err := uc.shortenedUrlRepository.Save(shortenedUrl)
 
 	if err != nil {
+		uc.log.Info("Error on save ", err)
+
 		return entities.ShortenedUrl{}, errors.InternalError(err)
 	}
 
